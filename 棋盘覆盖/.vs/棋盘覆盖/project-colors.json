@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "35115f82-d243-429c-b6bd-09ed1ca67802": {
+      "ProjectGuid": "35115f82-d243-429c-b6bd-09ed1ca67802",
+      "DisplayName": "棋盘覆盖",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
