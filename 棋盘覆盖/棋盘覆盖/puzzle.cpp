@@ -3,6 +3,7 @@
 #include <cmath>
 #include <ctime>
 #include <SFML/Graphics.hpp>
+#include <random>
 using namespace std;
 int board[1024][1024];
 int count = 0;
@@ -82,13 +83,31 @@ sf::Color int2color(int a)
 		return sf::Color(255, 192, 203);//粉
 	}
 }
+
 int main()
 {
 	int temp = 0;
 	int k, x, y;
+	
+	random_device rd;
+	mt19937 gen(rd());
+	uniform_int_distribution<int> dis(0, 255);//均匀分布
 	while (cin >> k >> x >> y)
 	{ 
+		::count = 0;
+		vector<sf::Color> randomColors; // 存储随机颜色的容器
 		int n = pow(2, k);
+		int num = (n * n - 1) / 3 + 1;//骨牌数量
+		//初始化骨牌颜色
+		
+		randomColors.clear();
+		//randomColors.resize(num);
+		// 生成并保存随机颜色
+		for (int i = 0; i < num; ++i) 
+		{ 
+			sf::Color randomColor(dis(gen), dis(gen), dis(gen));
+			randomColors.push_back(randomColor);
+		}
 		temp++;
 		x--;
 		y--;
@@ -106,7 +125,7 @@ int main()
 			}
 			cout << endl;
 		}
-		sf::RenderWindow window(sf::VideoMode(800, 800), "Chessboard");
+		sf::RenderWindow window(sf::VideoMode(n*50, n*50), "Chessboard");
 		while (window.isOpen())
 		{
 			sf::Event event;
@@ -119,22 +138,16 @@ int main()
 			window.clear();
 
 			// 绘制棋盘
-			sf::RectangleShape square(sf::Vector2f(100, 100));
-			for (int i = 0; i < n; ++i)
+			sf::RectangleShape square(sf::Vector2f(50, 50));
+			for (int i = 0; i < n; i++)
 			{
-				for (int j = 0; j < n; ++j)
+				for (int j = 0; j < n; j++)
 				{
-					square.setFillColor(board[i][j] == -1 ? sf::Color::Black : int2color(board[i][j]));
+					square.setFillColor(board[i][j] == -1 ? sf::Color::Black : randomColors[board[i][j]]);
 					square.setPosition(j * 50, i * 50);
 					window.draw(square);
 				}
-				square.setFillColor(sf::Color::Black);
-				square.setPosition(n * 50, i * 50);
-				window.draw(square);
 			}
-			square.setFillColor(sf::Color::Black);
-			square.setPosition(n * 50, n * 50);
-			window.draw(square);
 			window.display();
 		}
 	}
