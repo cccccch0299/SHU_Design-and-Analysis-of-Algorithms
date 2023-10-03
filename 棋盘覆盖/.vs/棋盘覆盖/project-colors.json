@@ -5,6 +5,11 @@
       "ProjectGuid": "35115f82-d243-429c-b6bd-09ed1ca67802",
       "DisplayName": "棋盘覆盖",
       "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "杂项文件",
+      "ColorIndex": -1
     }
   },
   "NextColorIndex": 1

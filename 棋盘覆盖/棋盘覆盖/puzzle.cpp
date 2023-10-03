@@ -101,7 +101,6 @@ int main()
 		//初始化骨牌颜色
 		
 		randomColors.clear();
-		//randomColors.resize(num);
 		// 生成并保存随机颜色
 		for (int i = 0; i < num; ++i) 
 		{ 
@@ -134,9 +133,7 @@ int main()
 				if (event.type == sf::Event::Closed)
 					window.close();
 			}
-
 			window.clear();
-
 			// 绘制棋盘
 			sf::RectangleShape square(sf::Vector2f(50, 50));
 			for (int i = 0; i < n; i++)
@@ -152,5 +149,4 @@ int main()
 		}
 	}
 	return 0;
-
 }

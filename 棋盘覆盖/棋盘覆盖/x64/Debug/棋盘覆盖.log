@@ -1,6 +1,1 @@
-﻿  puzzle.cpp
-E:\大学\专业课\算法设计与分析\SHU_Design-and-Analysis-of-Algorithms\棋盘覆盖\棋盘覆盖\puzzle.cpp(99,9): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
-E:\大学\专业课\算法设计与分析\SHU_Design-and-Analysis-of-Algorithms\棋盘覆盖\棋盘覆盖\puzzle.cpp(147,35): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-E:\大学\专业课\算法设计与分析\SHU_Design-and-Analysis-of-Algorithms\棋盘覆盖\棋盘覆盖\puzzle.cpp(147,27): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-E:\大学\专业课\算法设计与分析\SHU_Design-and-Analysis-of-Algorithms\棋盘覆盖\棋盘覆盖\puzzle.cpp(85): warning C4715: “int2color”: 不是所有的控件路径都返回值
-  棋盘覆盖.vcxproj -> E:\大学\专业课\算法设计与分析\SHU_Design-and-Analysis-of-Algorithms\棋盘覆盖\x64\Debug\棋盘覆盖.exe
+﻿  棋盘覆盖.vcxproj -> E:\大学\专业课\算法设计与分析\SHU_Design-and-Analysis-of-Algorithms\棋盘覆盖\x64\Debug\棋盘覆盖.exe
